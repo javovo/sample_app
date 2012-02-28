@@ -1,0 +1,10 @@
+require 'autotest/growl'
+
+Autotest::Growl::clear_terminal = false
+Autotest::Growl::sticky_failure_notifications = true
+Autotest::Growl::show_modified_files = true
+
+#other options available
+#Autotest::Growl::custom_options = '--port 54321'
+#Autotest::Growl::hide_label = true
+#Autotest::Growl::one_notification_per_run = true
