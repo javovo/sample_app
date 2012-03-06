@@ -22,3 +22,11 @@ Autotest::Growl::show_modified_files = true
 #Autotest::Growl::custom_options = '--port 54321'
 #Autotest::Growl::hide_label = true
 #Autotest::Growl::one_notification_per_run = true
+
+
+
+Autotest.add_hook :initialize do |autotest|
+	autotest.add_mapping(%r%^spec/(requests)/.*rb$%) do |filename, _|
+		filename
+	end
+end
